@@ -130,7 +130,7 @@ footer { text-align: center; padding: 40px; background: var(--dark); color: #777
     .nav-links { display: none; } /* Per semplicità qui la nascondiamo, andrebbe fatto un menu hamburger */
 }
 
-/* PAGINA PERCORSO */
+/* PAGINA PERCORSI */
 .page-header {
     background: var(--dark);
     color: white;
