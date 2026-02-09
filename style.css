@@ -223,6 +223,12 @@ th { background: var(--gray); font-weight: bold; }
     transform: scale(1.05);
 }
 
+.registration-card.featured2 {
+    border: 2px solid var(--primary);
+    box-shadow: 0 10px 40px rgba(94, 255, 0, 0.1);
+    transform: scale(1.05);
+}
+
 .price {
     font-size: 3rem;
     font-weight: 900;
