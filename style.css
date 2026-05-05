@@ -24,7 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%;
+    padding: 15px 20px; /* Ridotto il padding laterale da 5% a 20px */
     background: var(--dark);
     color: white;
     position: sticky;
@@ -32,7 +32,19 @@ body {
     z-index: 1000;
 }
 
-.logo { font-weight: 900; font-size: 1.5rem; }
+.logo { 
+    font-weight: 900; 
+    font-size: 1.5rem; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 40px; /* Regola l'altezza come preferisci */
+    width: auto;
+}
+
 .logo span { color: var(--primary); }
 
 .nav-links { display: flex; list-style: none; gap: 20px; align-items: center; }
