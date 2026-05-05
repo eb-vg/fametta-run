@@ -15,6 +15,13 @@
             <img src="images/main-theme.png" alt="Fametta Run Logo" class="logo-img">
             FamettaRun<span>2026</span>
         </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="programma.html">Programma</a></li>
@@ -25,6 +32,15 @@
             <li><a href="sponsor.html">Sponsor</a></li>
         </ul>
     </nav>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
     <header class="page-header">
         <h1>Ritrovo</h1>
