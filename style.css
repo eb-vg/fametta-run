@@ -167,6 +167,69 @@ body {
     margin: 0 auto 15px auto;
 }
 
+/* PERCORSI SPECIFICI */
+.route-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-left: 10px solid var(--gray);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.route-card.white { border-left-color: #ffffff; border: 1px solid #eee; border-left-width: 10px; }
+.route-card.blue { border-left-color: var(--blue-accent); }
+.route-card.green { border-left-color: var(--primary); }
+
+.route-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.route-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.route-title h2 { font-size: 1.8rem; }
+
+.route-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.feature-box {
+    background: var(--gray);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.feature-box strong { display: block; color: var(--blue-medium); margin-bottom: 5px; }
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--blue-medium);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-download:hover { background: var(--dark); transform: translateY(-2px); }
+
 /* FOOTER */
 footer { text-align: center; padding: 40px; background: var(--blue-medium); color: #a5c7e5; font-size: 0.8rem; }
 
