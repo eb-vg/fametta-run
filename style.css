@@ -96,6 +96,9 @@ body {
 .hero-btns { margin-top: 30px; display: flex; gap: 15px; justify-content: center; }
 
 .btn-primary, .btn-secondary {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.4;
     padding: 15px 30px;
     text-decoration: none;
     font-weight: bold;
