@@ -519,6 +519,7 @@ th { background: var(--gray); font-weight: bold; color: var(--dark); }
     font-size: 1.3rem;
     border-bottom: 2px solid var(--primary);
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .news-widget {
