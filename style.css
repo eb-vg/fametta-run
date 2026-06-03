@@ -168,7 +168,7 @@ body {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: white;
+    color: inherit;
 }
 
 .path-dot {
