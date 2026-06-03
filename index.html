@@ -164,6 +164,68 @@
         <p>&copy; 2026 Fametta Run - Azzurra Garbagnate ASD e Virtus Groane ASD</p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hero = document.querySelector('.hero');
+            if (!hero) return;
+
+            // Check if page was reloaded (F5)
+            const navigationEntries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+            const isReload = navigationEntries && navigationEntries.length > 0 && navigationEntries[0].type === 'reload';
+
+            // Check if it's the first visit to the homepage in this browser session
+            const hasVisited = sessionStorage.getItem('visitedHomepage');
+
+            // Play intro only if it's an F5 reload OR the first visit of the session
+            const shouldPlayIntro = isReload || !hasVisited;
+
+            if (shouldPlayIntro) {
+                // Mark session as visited
+                sessionStorage.setItem('visitedHomepage', 'true');
+
+                // Prevent browser scroll restoration on reload to start fresh at top
+                if ('scrollRestoration' in history) {
+                    history.scrollRestoration = 'manual';
+                }
+                window.scrollTo(0, 0);
+
+                // Create the overlay by cloning the hero
+                const introOverlay = hero.cloneNode(true);
+                introOverlay.classList.add('hero-intro-overlay');
+                document.body.appendChild(introOverlay);
+
+                const fadeHeight = window.innerHeight;
+
+                function handleScroll() {
+                    const scrollY = window.scrollY;
+
+                    if (scrollY >= fadeHeight) {
+                        // Permanently remove the overlay
+                        introOverlay.remove();
+                        window.removeEventListener('scroll', handleScroll);
+                    } else {
+                        // Smoothly fade out the overlay
+                        const opacity = Math.max(0, 1 - scrollY / fadeHeight);
+                        introOverlay.style.opacity = opacity;
+                    }
+                }
+
+                window.addEventListener('scroll', handleScroll, { passive: true });
+
+                // Click to skip/fade out intro overlay
+                introOverlay.addEventListener('click', () => {
+                    introOverlay.style.transition = 'opacity 0.5s ease';
+                    introOverlay.style.opacity = 0;
+                    window.removeEventListener('scroll', handleScroll);
+                    
+                    setTimeout(() => {
+                        introOverlay.remove();
+                    }, 500);
+                });
+            }
+        });
+    </script>
+
 </body>
 
-</html>
+</html>
