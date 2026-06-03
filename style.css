@@ -102,11 +102,11 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 0 20px;
+    padding: 0 20px 8vh 20px;
 }
 
 /* --- FULL-PAGE INTRO STATE --- */
@@ -121,6 +121,7 @@ body {
     cursor: pointer;
     user-select: none;
     transition: opacity 0.1s ease-out;
+    padding-bottom: 15vh;
 }
 
 
