@@ -79,7 +79,7 @@ body {
 /* HERO */
 .hero {
     height: 56vh;
-    background: linear-gradient(rgba(36, 64, 146, 0.7), rgba(36, 64, 146, 0.7)), url('https://images.unsplash.com/photo-1530549387631-6c129c1abc7a?auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(36, 64, 146, 0.6), rgba(36, 64, 146, 0.6)), url('images/hero_running_park.png');
     background-size: cover;
     background-position: center;
     display: flex;
