@@ -211,6 +211,10 @@ body {
     gap: 15px;
 }
 
+.route-header.route-actions {
+    justify-content: center;
+}
+
 .route-title {
     display: flex;
     align-items: center;
